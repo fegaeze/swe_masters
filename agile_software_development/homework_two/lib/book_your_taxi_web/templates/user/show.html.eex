@@ -1,0 +1,29 @@
+<%= if @user.role == "driver" do %>
+  <div>
+    <h2>My Taxi Information</h2>
+    <%= if @has_taxi do %>
+      <ul>
+        <li><strong>Name:</strong> <%= @user.full_name %></li>
+        <li><strong>Email:</strong> <%= @user.email %></li>
+        <li><strong>Rate:</strong> <%= @taxi.rate %></li>
+        <li><strong>Location:</strong> <%= @taxi.location %></li>
+        <li><strong>Status:</strong> <%= @taxi.status %></li>
+      </ul>
+    <% else %>
+      <ul>
+        <li><strong>Name:</strong> <%= @user.full_name %></li>
+        <li><strong>Email:</strong> <%= @user.email %></li>
+      </ul>
+
+      <%= link "Add a taxi", to: Routes.taxi_path(@conn, :new), class: "button" %>
+    <% end %>
+  </div>
+
+  <div>
+    <h2>Active Rides</h2>
+    <p>There are no active rides at the moment</p>
+  </div>
+
+<% else %>
+  <%= link "Book A Taxi", to: Routes.booking_path(@conn, :new), class: "button", id: "book-a-taxi-button" %>
+<% end %>

@@ -1,0 +1,78 @@
+<svg width="458px" height="254px"
+ viewBox="0.00 0.00 457.70 254.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0) translate(4 250)">
+<title>org.fegaeze</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-250 453.7,-250 453.7,4 -4,4"/>
+<!-- Board -->
+<g id="node1" class="node">
+<title>Board</title>
+<polygon fill="none" stroke="black" points="203.2,-10 203.2,-32 243.2,-32 243.2,-10 203.2,-10"/>
+<text text-anchor="start" x="206.1" y="-16.4" font-family="Times,serif" font-size="14.00">Board</text>
+<polygon fill="none" stroke="black" points="203.2,-4 203.2,-10 243.2,-10 243.2,-4 203.2,-4"/>
+</g>
+<!-- GameSystem -->
+<g id="node2" class="node">
+<title>GameSystem</title>
+<polygon fill="none" stroke="black" points="11.2,-114.5 11.2,-136.5 127.2,-136.5 127.2,-114.5 11.2,-114.5"/>
+<text text-anchor="start" x="31.88" y="-120.9" font-family="Times,serif" font-size="14.00">GameSystem</text>
+<polygon fill="none" stroke="black" points="11.2,-75.5 11.2,-114.5 127.2,-114.5 127.2,-75.5 11.2,-75.5"/>
+<text text-anchor="start" x="14.2" y="-98.9" font-family="Times,serif" font-size="14.00">display :String</text>
+<text text-anchor="start" x="14.2" y="-82.1" font-family="Times,serif" font-size="14.00">gameOver :boolean</text>
+</g>
+<!-- Board&#45;&gt;GameSystem -->
+<g id="edge1" class="edge">
+<title>Board&#45;&gt;GameSystem</title>
+<path fill="none" stroke="black" d="M194.96,-34.87C176.46,-45.25 151.59,-59.22 128.85,-72"/>
+<text text-anchor="middle" x="93.08" y="-59.4" font-family="Times,serif" font-size="14.00">gameSystem</text>
+<text text-anchor="middle" x="179.02" y="-22.27" font-family="Times,serif" font-size="14.00">board</text>
+</g>
+<!-- Kalah -->
+<g id="node3" class="node">
+<title>Kalah</title>
+<polygon fill="none" stroke="black" points="162.2,-114.5 162.2,-136.5 285.2,-136.5 285.2,-114.5 162.2,-114.5"/>
+<text text-anchor="start" x="206.99" y="-120.9" font-family="Times,serif" font-size="14.00">Kalah</text>
+<polygon fill="none" stroke="black" points="162.2,-75.5 162.2,-114.5 285.2,-114.5 285.2,-75.5 162.2,-75.5"/>
+<text text-anchor="start" x="165.2" y="-98.9" font-family="Times,serif" font-size="14.00">names :String</text>
+<text text-anchor="start" x="165.2" y="-82.1" font-family="Times,serif" font-size="14.00">numberOfStones :int</text>
+</g>
+<!-- Board&#45;&gt;Kalah -->
+<g id="edge2" class="edge">
+<title>Board&#45;&gt;Kalah</title>
+<path fill="none" stroke="black" d="M223.2,-36.09C223.2,-46.33 223.2,-59.71 223.2,-71.98"/>
+<text text-anchor="middle" x="202.79" y="-59.38" font-family="Times,serif" font-size="14.00">kalah *</text>
+<text text-anchor="middle" x="207.27" y="-40.29" font-family="Times,serif" font-size="14.00">board</text>
+</g>
+<!-- PlayingPit -->
+<g id="node5" class="node">
+<title>PlayingPit</title>
+<polygon fill="none" stroke="black" points="319.2,-114.5 319.2,-136.5 442.2,-136.5 442.2,-114.5 319.2,-114.5"/>
+<text text-anchor="start" x="351.53" y="-120.9" font-family="Times,serif" font-size="14.00">PlayingPit</text>
+<polygon fill="none" stroke="black" points="319.2,-75.5 319.2,-114.5 442.2,-114.5 442.2,-75.5 319.2,-75.5"/>
+<text text-anchor="start" x="322.2" y="-98.9" font-family="Times,serif" font-size="14.00">names :String</text>
+<text text-anchor="start" x="322.2" y="-82.1" font-family="Times,serif" font-size="14.00">numberOfStones :int</text>
+</g>
+<!-- Board&#45;&gt;PlayingPit -->
+<g id="edge3" class="edge">
+<title>Board&#45;&gt;PlayingPit</title>
+<path fill="none" stroke="black" d="M251.27,-34.46C270.15,-44.86 295.77,-58.98 319.2,-71.89"/>
+<text text-anchor="middle" x="282.45" y="-59.29" font-family="Times,serif" font-size="14.00">playingPits *</text>
+<text text-anchor="middle" x="267.21" y="-21.86" font-family="Times,serif" font-size="14.00">board</text>
+</g>
+<!-- Player -->
+<g id="node4" class="node">
+<title>Player</title>
+<polygon fill="none" stroke="black" points="29.2,-219.5 29.2,-241.5 109.2,-241.5 109.2,-219.5 29.2,-219.5"/>
+<text text-anchor="start" x="51.32" y="-225.9" font-family="Times,serif" font-size="14.00">Player</text>
+<polygon fill="none" stroke="black" points="29.2,-180.5 29.2,-219.5 109.2,-219.5 109.2,-180.5 29.2,-180.5"/>
+<text text-anchor="start" x="32.2" y="-203.9" font-family="Times,serif" font-size="14.00">name :String</text>
+<text text-anchor="start" x="32.2" y="-187.1" font-family="Times,serif" font-size="14.00">turn :boolean</text>
+</g>
+<!-- GameSystem&#45;&gt;Player -->
+<g id="edge4" class="edge">
+<title>GameSystem&#45;&gt;Player</title>
+<path fill="none" stroke="black" d="M69.2,-141.23C69.2,-152.61 69.2,-165.31 69.2,-176.7"/>
+<text text-anchor="middle" x="43.74" y="-164.1" font-family="Times,serif" font-size="14.00">players *</text>
+<text text-anchor="middle" x="34.6" y="-145.43" font-family="Times,serif" font-size="14.00">gamesystem</text>
+</g>
+</g>
+</svg>

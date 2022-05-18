@@ -1,0 +1,78 @@
+class PowerManagement {
+        Boolean charging=false;
+        Boolean isActive=false;
+        Boolean isSWitchOn=false;
+        
+        BatteryController {
+            Empty { 
+            batteryStatusCheck [checkSwitchControllerOn] -> Charging;
+            }
+            TwentyFivePercentCharged { 
+            batteryStatusCheck [checkSwitchControllerOff] -> Empty;
+            batteryStatusCheck [checkSwitchControllerOn] -> Charging;
+            }
+            FortyPercentCharged { 
+            batteryStatusCheck [checkSwitchControllerOn] -> Charging;
+            }
+            SixtyPercentCharged { 
+            batteryStatusCheck [checkSwitchControllerOn] -> Charging;
+            }
+            EightyPercentCharged { 
+            consumesBatteryPower -> Discharging;
+            batteryStatusCheck [checkSwitchControllerOff] -> Full;
+            }
+            Full { 
+            consumesBatteryPower -> Discharging;
+            }
+            Charging {
+            batteryStatusCheck [batteryCharge80] -> EightyPercentCharged;
+            }
+            Discharging {
+            batteryStatusCheck [checkSwitchControllerOff] -> TwentyFivePercentCharged;
+            batteryStatusCheck [batteryCharge40] -> FortyPercentCharged;
+            batteryStatusCheck [batteryCharge60] -> SixtyPercentCharged;
+            }
+        }
+        
+        SwitchController {
+            On { 
+            entry/{turnOn();}
+            turnOff -> Off;
+            }
+            Off { 
+            turnOn -> On;
+            }
+        }
+        
+        Laptop {
+            Active { 
+            entry/{setActive();}
+            setInactive -> Inactive; 
+            }
+            Inactive { 
+            entry/{setInactive();}
+            setActive -> Active; 
+            }
+        }
+        
+        void turnOn() {  
+            this.isSWitchOn = true;
+        }  
+        
+        void setActive() {  
+            this.isActive = true;
+        }  
+        
+        void setInactive() {  
+            this.isActive = false;
+        }  
+    }
+//$?[End_of_model]$?
+
+namespace -;
+
+
+class PowerManagement
+{
+  position 50 30 109 45;
+}

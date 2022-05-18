@@ -1,0 +1,66 @@
+// Umple class diagram representing card games
+// in the Oh Hell and Whist family
+
+class Player {
+  name;
+  Boolean turn;
+}
+
+class GameSystem {
+  display;
+  Boolean gameOver;
+  1 -- * Player;
+}
+
+class Board {
+  display;
+  Boolean gameOver;
+  1 -- 1 GameSystem;
+}
+
+class PlayingPit {
+  Integer numOfStones;
+}
+
+class Kalah {
+  Integer numOfStones;
+}
+
+association {  
+  0..1 Board <@>- 4..6 PlayingPit;  
+  0..1 Board <@>- 2 Kalah;
+}  
+//$?[End_of_model]$?
+
+namespace -;
+
+//Position information of the display on a diagram of all classes and of their associations
+
+class Player
+{
+  position 18 11 192 75.3594;
+  position.association Card:hand__Player 7,0 0,88;
+  position.association Player__Trick 193,8 0,10;
+}
+
+class GameSystem
+{
+  position 318 19 157.094 75.3594;
+  position.association GameSystem__Player 0,38 193,46;
+}
+
+class Board
+{
+  position 590 14 157.094 75.3594;
+  position.association Board__GameSystem 0,44 158,39;
+}
+
+class PlayingPit
+{
+  position 690 325 174.594 58.3594;
+}
+
+class Kalah
+{
+  position 476 322 174.594 58.3594;
+}

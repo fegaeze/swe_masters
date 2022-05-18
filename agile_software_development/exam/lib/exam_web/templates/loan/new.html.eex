@@ -1,0 +1,34 @@
+<div>
+  <h3>Request Loan</h3>
+  <br />
+  <%= form_for @changeset, Routes.loan_path(@conn, :create), fn loan -> %>
+      <div>
+          <label for="email">
+            Email
+            <%= text_input loan, :email, id: "email", required: true %>
+          </label>
+          <%= error_tag loan, :email %>
+      </div>
+      <br/>
+
+      <div>
+          <label for="loan_amount">
+            Loan Amount
+            <%= number_input loan, :loan_amount, id: "loan_amount", required: true %>
+          </label>
+          <%= error_tag loan, :loan_amount %>
+      </div>
+      <br/>
+
+      <div>
+          <label for="loan_term">
+            Loan Term
+            <%= number_input loan, :loan_term, id: "loan_term", required: true %>
+          </label>
+          <%= error_tag loan, :loan_term %>
+      </div>
+      <br/>
+
+      <%= submit "Submit Request", id: "submit_button" %>
+  <% end %>
+</div>

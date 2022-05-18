@@ -1,0 +1,38 @@
+<h2>Sign up</h2>
+
+<%= if @changeset.action do %>
+  <div class="alert alert-danger">
+    <p>Oops, something went wrong! Please check the errors below.</p>
+  </div>
+<% end %>
+
+<%= form_for @changeset, Routes.user_path(@conn, :create), fn user -> %>
+  <div class="form-group">
+    <%= label user, :full_name, class: "control-label" %>
+    <%= text_input user, :full_name, class: "form-control" %>
+    <%= error_tag user, :full_name %>
+  </div>
+  <div class="form-group">
+    <%= label user, :age, class: "control-label" %>
+    <%= number_input user, :age, class: "form-control" %>
+    <%= error_tag user, :age %>
+  </div>
+  <div class="form-group">
+    <%= label user, :role, class: "control-label" %>
+    <%= select user, :role, ["Customer": "customer", "Driver": "driver"], class: "w-100" %>
+    <%= error_tag user, :role %>
+  </div>
+  <div class="form-group">
+    <%= label user, :email, class: "control-label" %>
+    <%= email_input user, :email, class: "form-control" %>
+    <%= error_tag user, :email %>
+  </div>
+  <div class="form-group">
+    <%= label user, :password, class: "control-label" %>
+    <%= password_input user, :password, class: "form-control" %>
+    <%= error_tag user, :password %>
+  </div>
+  <div class="form-group">
+    <%= submit "Submit", class: "button button-outline" %>
+  </div>
+<% end %>

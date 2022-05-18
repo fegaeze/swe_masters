@@ -1,0 +1,213 @@
+- c: 	org.fulib.classmodel.ClassModel
+  classes: 	player 	gameSystem 	board 	playingPit 	kalah
+  defaultCollectionType: 	c1
+  defaultPropertyStyle: 	Bean
+  defaultRoleType: 	"java.util.ArrayList<%s>"
+  mainJavaDir: 	"src/main/java"
+  packageName: 	org.fegaeze
+  packageSrcFolder: 	"src/main/java/org/fegaeze"
+
+- player: 	org.fulib.classmodel.Clazz
+  attributes: 	player_name 	player_turn
+  model: 	c
+  modified: 	false
+  name: 	Player
+  propertyStyle: 	Bean
+  roles: 	player_gamesystem
+
+- gameSystem: 	org.fulib.classmodel.Clazz
+  attributes: 	gameSystem_display 	gameSystem_gameOver
+  model: 	c
+  modified: 	false
+  name: 	GameSystem
+  propertyStyle: 	Bean
+  roles: 	gameSystem_players 	gameSystem_board
+
+- board: 	org.fulib.classmodel.Clazz
+  model: 	c
+  modified: 	false
+  name: 	Board
+  propertyStyle: 	Bean
+  roles: 	board_gameSystem 	board_playingPits 	board_kalah
+
+- playingPit: 	org.fulib.classmodel.Clazz
+  attributes: 	playingPit_names 	playingPit_numberOfStones
+  model: 	c
+  modified: 	false
+  name: 	PlayingPit
+  propertyStyle: 	Bean
+  roles: 	playingPit_board
+
+- kalah: 	org.fulib.classmodel.Clazz
+  attributes: 	kalah_names 	kalah_numberOfStones
+  model: 	c
+  modified: 	false
+  name: 	Kalah
+  propertyStyle: 	Bean
+  roles: 	kalah_board
+
+- c1: 	org.fulib.classmodel.CollectionType
+  implClass: 	class java.util.ArrayList
+  implTemplate: 	"java.util.ArrayList<%s>"
+  itf: 	org.fulib.classmodel.CollectionInterface.List
+  qualifiedImplName: 	java.util.ArrayList
+  simpleImplName: 	ArrayList
+
+- player_name: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- player_turn: 	org.fulib.classmodel.Attribute
+  clazz: 	player
+  id: 	Player_turn
+  modified: 	false
+  name: 	turn
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- player_gamesystem: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	player
+  id: 	Player_gamesystem
+  modified: 	false
+  name: 	gamesystem
+  other: 	gameSystem_players
+  propertyStyle: 	Bean
+
+- gameSystem_display: 	org.fulib.classmodel.Attribute
+  clazz: 	gameSystem
+  id: 	GameSystem_display
+  modified: 	false
+  name: 	display
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- gameSystem_gameOver: 	org.fulib.classmodel.Attribute
+  clazz: 	gameSystem
+  id: 	GameSystem_gameOver
+  modified: 	false
+  name: 	gameOver
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- gameSystem_players: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	gameSystem
+  collectionType: 	c1
+  id: 	GameSystem_players
+  modified: 	false
+  name: 	players
+  other: 	player_gamesystem
+  propertyStyle: 	Bean
+  roleType: 	"java.util.ArrayList<%s>"
+
+- gameSystem_board: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	gameSystem
+  id: 	GameSystem_board
+  modified: 	false
+  name: 	board
+  other: 	board_gameSystem
+  propertyStyle: 	Bean
+
+- board_gameSystem: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	board
+  id: 	Board_gameSystem
+  modified: 	false
+  name: 	gameSystem
+  other: 	gameSystem_board
+  propertyStyle: 	Bean
+
+- board_playingPits: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	board
+  collectionType: 	c1
+  id: 	Board_playingPits
+  modified: 	false
+  name: 	playingPits
+  other: 	playingPit_board
+  propertyStyle: 	Bean
+  roleType: 	"java.util.ArrayList<%s>"
+
+- board_kalah: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	board
+  collectionType: 	c1
+  id: 	Board_kalah
+  modified: 	false
+  name: 	kalah
+  other: 	kalah_board
+  propertyStyle: 	Bean
+  roleType: 	"java.util.ArrayList<%s>"
+
+- playingPit_names: 	org.fulib.classmodel.Attribute
+  clazz: 	playingPit
+  id: 	PlayingPit_names
+  modified: 	false
+  name: 	names
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- playingPit_numberOfStones: 	org.fulib.classmodel.Attribute
+  clazz: 	playingPit
+  id: 	PlayingPit_numberOfStones
+  modified: 	false
+  name: 	numberOfStones
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- playingPit_board: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	playingPit
+  id: 	PlayingPit_board
+  modified: 	false
+  name: 	board
+  other: 	board_playingPits
+  propertyStyle: 	Bean
+
+- kalah_names: 	org.fulib.classmodel.Attribute
+  clazz: 	kalah
+  id: 	Kalah_names
+  modified: 	false
+  name: 	names
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- kalah_numberOfStones: 	org.fulib.classmodel.Attribute
+  clazz: 	kalah
+  id: 	Kalah_numberOfStones
+  modified: 	false
+  name: 	numberOfStones
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- kalah_board: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	kalah
+  id: 	Kalah_board
+  modified: 	false
+  name: 	board
+  other: 	board_kalah
+  propertyStyle: 	Bean
+

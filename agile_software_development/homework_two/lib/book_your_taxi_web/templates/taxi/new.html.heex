@@ -1,0 +1,25 @@
+<h2>Add a taxi</h2>
+
+<%= form_for @conn, Routes.taxi_path(@conn, :create), fn taxi -> %>
+  <div class="form-group">
+    <%= label taxi, :location, class: "control-label" %>
+    <%= text_input taxi, :location, class: "form-control",  required: true %>
+    <%= error_tag taxi, :location %>
+  </div>
+
+  <div class="form-group">
+    <%= label taxi, :number_of_seats, class: "control-label" %>
+    <%= number_input taxi, :number_of_seats, class: "form-control", required: true %>
+    <%= error_tag taxi, :number_of_seats %>
+  </div>
+
+  <div class="form-group">
+    <%= label taxi,  :rate, class: "control-label" %>
+    <%= number_input taxi, :rate, class: "form-control", step: "0.01", required: true %>
+    <%= error_tag taxi, :rate %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Add Taxi", class: "btn btn-primary" %>
+  </div>
+<% end %>

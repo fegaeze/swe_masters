@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PowerManagementTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-01-10T17:15:08" hostname="husky.lan" time="0.031">
+  <properties/>
+  <testcase name="testSmall()" classname="PowerManagementTests" time="0.031"/>
+  <system-out><![CDATA[
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charging
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged25
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged40
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged80
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Discharging
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged40
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged80
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Discharging
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged40
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged80
+Laptop: Inactive
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Discharging
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged40
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged80
+Laptop: Inactive
+Is charging: true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

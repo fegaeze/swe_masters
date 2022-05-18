@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.fegaeze'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'org.fulib', name: 'fulibTools', version: '1.5.1'
+}

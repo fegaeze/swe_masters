@@ -1,0 +1,42 @@
+/* This file is for your main application CSS */
+@import "./variables.css";
+@import "./components.css";
+@import "./phoenix.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--black);
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 0;
+}

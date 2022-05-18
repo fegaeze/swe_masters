@@ -1,0 +1,37 @@
+plugins {
+	id 'java'
+	// https://plugins.gradle.org/plugin/org.fulib.fulibGradle
+	id 'org.fulib.fulibGradle' version '0.5.0'
+}
+
+group = 'org.fegaeze'
+version = '0.1.0'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+	// https://mvnrepository.com/artifact/org.fulib/fulibScenarios
+	fulibScenarios group: 'org.fulib', name: 'fulibScenarios', version: '1.7.0'
+
+	// https://mvnrepository.com/artifact/org.fulib/fulibTools
+	testImplementation group: 'org.fulib', name: 'fulibTools', version: '1.5.1'
+
+	// https://mvnrepository.com/artifact/org.fulib/fulibTables
+	testImplementation group: 'org.fulib', name: 'fulibTables', version: '1.4.0'
+
+	// https://mvnrepository.com/artifact/org.fulib/fulibMockups
+	testImplementation group: 'org.fulib', name: 'fulibMockups', version: '0.4.0'
+
+	// https://mvnrepository.com/artifact/junit/junit
+	testImplementation group: 'junit', name: 'junit', version: '4.13'
+
+	// https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
+	testImplementation group: 'org.slf4j', name: 'slf4j-nop', version: '1.7.30'
+}
+
+generateScenarioSource {
+	classDiagramSVG = true
+}

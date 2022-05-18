@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%= csrf_meta_tag() %>
+    <%= live_title_tag assigns[:page_title] || "BookYourTaxi", suffix: " · Phoenix Framework" %>
+    <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
+    <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
+  </head>
+  <body>
+    <header class="phx-hero mt-3">
+      <h1>Book a Taxi</h1>
+      <p>Your destination is just a form away</p>
+
+      <%= if @conn.assigns.current_user do %>
+        <%= link "Log out", to: Routes.session_path(@conn, :delete, @conn.assigns.current_user), method: "delete", class: "button" %>
+      <% else %>
+        <%= link "Log in", to: Routes.session_path(@conn, :new), class: "button" %>
+        <%= link "Sign up", to: Routes.user_path(@conn, :new), class: "button" %>
+      <% end %>
+    </header>
+
+    <%= @inner_content %>
+  </body>
+</html>

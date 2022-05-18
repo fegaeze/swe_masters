@@ -1,0 +1,120 @@
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charging
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged25
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged40
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged80
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+ Battery controller: Discharging
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged40
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged80
+Laptop: Active
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: On
+ Battery controller: Discharging
+Laptop: Active
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged40
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: On
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged80
+Laptop: Inactive
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: Off
+ Battery controller: Discharging
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged40
+Laptop: Inactive
+Is charging: false
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged60
+Laptop: Inactive
+Is charging: true
+
+⌛ 10 min passed
+Switch controller: Off
+Battery controller: Charged80
+Laptop: Inactive
+Is charging: true
