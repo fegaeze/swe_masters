@@ -1,0 +1,1447 @@
+[
+    {
+        "id": "ef043575e44d5ba3",
+        "type": "tab",
+        "label": "Local MQTT Broker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "601aaba.a88c154",
+        "type": "tab",
+        "label": "433 GUI",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a6ec67d9f7944625",
+        "type": "tab",
+        "label": "Temperature Sensor GUI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "aca1cc6.8423f3",
+        "type": "ui_tab",
+        "name": "IOT Project",
+        "icon": "fa-fire",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b5f93c47aea3faea",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Lights Automation",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 16,
+                "gy": 32,
+                "cx": 6,
+                "cy": 6,
+                "px": 16,
+                "py": 16
+            }
+        }
+    },
+    {
+        "id": "c343bb9d277a08a1",
+        "type": "ui_group",
+        "name": "Lamp Control",
+        "tab": "aca1cc6.8423f3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d2ee05e8891c6e57",
+        "type": "mqtt-broker",
+        "name": "RPi Mosquitto Broker",
+        "broker": "192.168.0.100",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/status",
+        "birthQos": "1",
+        "birthRetain": "true",
+        "birthPayload": "ONLINE",
+        "birthMsg": {},
+        "closeTopic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/status",
+        "closeQos": "1",
+        "closeRetain": "true",
+        "closePayload": "OFFLINE",
+        "closeMsg": {},
+        "willTopic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/status",
+        "willQos": "1",
+        "willRetain": "true",
+        "willPayload": "DISCONNECTED",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e1ee2cd5a9317b1f",
+        "type": "mqtt-broker",
+        "name": "Aedes MQTT Broker",
+        "broker": "localhost",
+        "port": "1884",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a127fe933790ec4e",
+        "type": "mqtt-broker",
+        "name": "HiveMq MQTT Broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "78031af66a4e081f",
+        "type": "ui_group",
+        "name": "CPU Temp",
+        "tab": "aca1cc6.8423f3",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ee6d204b5467aee8",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "4a0d9211a5c67b28",
+        "type": "aedes broker",
+        "z": "ef043575e44d5ba3",
+        "name": "Aedes MQTT Broker",
+        "mqtt_port": "1884",
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "70403071efdecd66"
+            ],
+            [
+                "8adf59445ba6befd"
+            ]
+        ]
+    },
+    {
+        "id": "70403071efdecd66",
+        "type": "debug",
+        "z": "ef043575e44d5ba3",
+        "name": "Aedes Status Events",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8adf59445ba6befd",
+        "type": "debug",
+        "z": "ef043575e44d5ba3",
+        "name": "Aedes Publish Event",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "071555ffdd6b3b5d",
+        "type": "ui_button",
+        "z": "601aaba.a88c154",
+        "name": "1 ON",
+        "group": "c343bb9d277a08a1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "1 ON",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "4478259 -p 183 -t 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 40,
+        "wires": [
+            [
+                "a902cbced14480bf",
+                "2ec949b69c3dfccc"
+            ]
+        ]
+    },
+    {
+        "id": "d919e641479b5164",
+        "type": "ui_button",
+        "z": "601aaba.a88c154",
+        "name": "1 OFF",
+        "group": "c343bb9d277a08a1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "1 OFF",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "4478268 -p 182 -t 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 80,
+        "wires": [
+            [
+                "a902cbced14480bf",
+                "0450c69645933df7"
+            ]
+        ]
+    },
+    {
+        "id": "233d4d16a2c17bee",
+        "type": "ui_button",
+        "z": "601aaba.a88c154",
+        "name": "2 ON",
+        "group": "c343bb9d277a08a1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "2 ON",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "purple",
+        "className": "",
+        "icon": "",
+        "payload": "4478403 -p 184 -t 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 120,
+        "wires": [
+            [
+                "a902cbced14480bf",
+                "3635339b73659139"
+            ]
+        ]
+    },
+    {
+        "id": "4e0baf13ff890b11",
+        "type": "ui_button",
+        "z": "601aaba.a88c154",
+        "name": "2 OFF",
+        "group": "c343bb9d277a08a1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "2 OFF",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "purple",
+        "className": "",
+        "icon": "",
+        "payload": "4478412 -p 183 -t 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "a902cbced14480bf",
+                "509ecb12198c5e71"
+            ]
+        ]
+    },
+    {
+        "id": "a04287f16b1baf1b",
+        "type": "ui_button",
+        "z": "601aaba.a88c154",
+        "name": "3 ON",
+        "group": "c343bb9d277a08a1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "3 ON",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "4478723 -p 183 -t 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 200,
+        "wires": [
+            [
+                "a902cbced14480bf",
+                "da3fe45bb839a522"
+            ]
+        ]
+    },
+    {
+        "id": "a8c963f4ffc92427",
+        "type": "ui_button",
+        "z": "601aaba.a88c154",
+        "name": "3 OFF",
+        "group": "c343bb9d277a08a1",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "3 OFF",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "4478732 -p 183 -t 1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 750,
+        "y": 240,
+        "wires": [
+            [
+                "a902cbced14480bf",
+                "9d07dc09bd25a3d8"
+            ]
+        ]
+    },
+    {
+        "id": "a902cbced14480bf",
+        "type": "exec",
+        "z": "601aaba.a88c154",
+        "command": "ssh pi@192.168.0.100 /home/pi/work/rpi-rf/scripts/rpi-rf_send ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "hostCmd",
+        "x": 1060,
+        "y": 140,
+        "wires": [
+            [
+                "ea7dc8de2d95ed65"
+            ],
+            [
+                "77beb1c69904856b"
+            ],
+            [
+                "e011aff5f342b652"
+            ]
+        ]
+    },
+    {
+        "id": "4e273abc78dff4d6",
+        "type": "mqtt in",
+        "z": "601aaba.a88c154",
+        "name": "Subscribe to switch topic",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/+/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d2ee05e8891c6e57",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 180,
+        "wires": [
+            [
+                "a295c11550f60bea"
+            ]
+        ]
+    },
+    {
+        "id": "ea7dc8de2d95ed65",
+        "type": "debug",
+        "z": "601aaba.a88c154",
+        "name": "stdout",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "77beb1c69904856b",
+        "type": "debug",
+        "z": "601aaba.a88c154",
+        "name": "stderr",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e011aff5f342b652",
+        "type": "debug",
+        "z": "601aaba.a88c154",
+        "name": "return code",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1310,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a295c11550f60bea",
+        "type": "switch",
+        "z": "601aaba.a88c154",
+        "name": "Switch Checker",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch1/on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch1/off",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch2/on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch2/off",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch3/on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch3/off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "071555ffdd6b3b5d"
+            ],
+            [
+                "d919e641479b5164"
+            ],
+            [
+                "233d4d16a2c17bee"
+            ],
+            [
+                "4e0baf13ff890b11"
+            ],
+            [
+                "a04287f16b1baf1b"
+            ],
+            [
+                "a8c963f4ffc92427"
+            ]
+        ]
+    },
+    {
+        "id": "b3b1df1e4d1c54e5",
+        "type": "inject",
+        "z": "601aaba.a88c154",
+        "name": "Publish 1/ON",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch1/on",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "3cf5483999e8bf3b"
+            ]
+        ]
+    },
+    {
+        "id": "6f3ef8015e54173e",
+        "type": "inject",
+        "z": "601aaba.a88c154",
+        "name": "Publish 1/OFF",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch1/off",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 400,
+        "wires": [
+            [
+                "3cf5483999e8bf3b"
+            ]
+        ]
+    },
+    {
+        "id": "5b8d592749f492c9",
+        "type": "inject",
+        "z": "601aaba.a88c154",
+        "name": "Publish 2/ON",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch2/on",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "3cf5483999e8bf3b"
+            ]
+        ]
+    },
+    {
+        "id": "d7242dcb2f9b46c1",
+        "type": "inject",
+        "z": "601aaba.a88c154",
+        "name": "Publish 2/OFF",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch2/off",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 520,
+        "wires": [
+            [
+                "3cf5483999e8bf3b"
+            ]
+        ]
+    },
+    {
+        "id": "2ef89652390125ac",
+        "type": "inject",
+        "z": "601aaba.a88c154",
+        "name": "Publish 3/ON",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch3/on",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "3cf5483999e8bf3b"
+            ]
+        ]
+    },
+    {
+        "id": "27edb46e6980eaef",
+        "type": "inject",
+        "z": "601aaba.a88c154",
+        "name": "Publish 3/OFF",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch3/off",
+        "payload": "",
+        "payloadType": "str",
+        "x": 110,
+        "y": 640,
+        "wires": [
+            [
+                "3cf5483999e8bf3b"
+            ]
+        ]
+    },
+    {
+        "id": "3cf5483999e8bf3b",
+        "type": "mqtt out",
+        "z": "601aaba.a88c154",
+        "name": "Publish  switch topics",
+        "topic": "",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d2ee05e8891c6e57",
+        "x": 420,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "f9b2f3fb955d5f1c",
+        "type": "mqtt in",
+        "z": "601aaba.a88c154",
+        "name": "Subscribe to status topic",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/+/status",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d2ee05e8891c6e57",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 550,
+        "y": 620,
+        "wires": [
+            [
+                "f98e8df21e022978"
+            ]
+        ]
+    },
+    {
+        "id": "2ec949b69c3dfccc",
+        "type": "change",
+        "z": "601aaba.a88c154",
+        "name": "Set switch1 context on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch1",
+                "pt": "flow",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 220,
+        "wires": [
+            [
+                "88cb4483a27b8c32"
+            ]
+        ]
+    },
+    {
+        "id": "0450c69645933df7",
+        "type": "change",
+        "z": "601aaba.a88c154",
+        "name": "Set switch1 context off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch1",
+                "pt": "flow",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 260,
+        "wires": [
+            [
+                "88cb4483a27b8c32"
+            ]
+        ]
+    },
+    {
+        "id": "3635339b73659139",
+        "type": "change",
+        "z": "601aaba.a88c154",
+        "name": "Set switch2 context on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch2",
+                "pt": "flow",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 300,
+        "wires": [
+            [
+                "88cb4483a27b8c32"
+            ]
+        ]
+    },
+    {
+        "id": "509ecb12198c5e71",
+        "type": "change",
+        "z": "601aaba.a88c154",
+        "name": "Set switch2 context off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch2",
+                "pt": "flow",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 340,
+        "wires": [
+            [
+                "88cb4483a27b8c32"
+            ]
+        ]
+    },
+    {
+        "id": "da3fe45bb839a522",
+        "type": "change",
+        "z": "601aaba.a88c154",
+        "name": "Set switch3 context on",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch3",
+                "pt": "flow",
+                "to": "on",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 380,
+        "wires": [
+            [
+                "88cb4483a27b8c32"
+            ]
+        ]
+    },
+    {
+        "id": "9d07dc09bd25a3d8",
+        "type": "change",
+        "z": "601aaba.a88c154",
+        "name": "Set switch3 context off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "switch3",
+                "pt": "flow",
+                "to": "off",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1100,
+        "y": 420,
+        "wires": [
+            [
+                "88cb4483a27b8c32"
+            ]
+        ]
+    },
+    {
+        "id": "88cb4483a27b8c32",
+        "type": "debug",
+        "z": "601aaba.a88c154",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1410,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f98e8df21e022978",
+        "type": "switch",
+        "z": "601aaba.a88c154",
+        "name": "Status Checker",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch1/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch2/status",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch3/status",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 780,
+        "y": 620,
+        "wires": [
+            [
+                "fb63bcbb27d2102d"
+            ],
+            [
+                "22c48ed0b3c64da7"
+            ],
+            [
+                "6fa04b29eaf8c408"
+            ]
+        ]
+    },
+    {
+        "id": "fb63bcbb27d2102d",
+        "type": "function",
+        "z": "601aaba.a88c154",
+        "name": "Get switch1 status",
+        "func": "msg.payload = flow.get(\"switch1\") || \"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 580,
+        "wires": [
+            [
+                "d030841ff9bba7b2"
+            ]
+        ]
+    },
+    {
+        "id": "22c48ed0b3c64da7",
+        "type": "function",
+        "z": "601aaba.a88c154",
+        "name": "Get switch2 status",
+        "func": "msg.payload = flow.get(\"switch2\") || \"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 620,
+        "wires": [
+            [
+                "3a2e3c8061375e3b"
+            ]
+        ]
+    },
+    {
+        "id": "6fa04b29eaf8c408",
+        "type": "function",
+        "z": "601aaba.a88c154",
+        "name": "Get switch3 status",
+        "func": "msg.payload = flow.get(\"switch3\") || \"off\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 660,
+        "wires": [
+            [
+                "16adf0f4585a8903"
+            ]
+        ]
+    },
+    {
+        "id": "d030841ff9bba7b2",
+        "type": "mqtt out",
+        "z": "601aaba.a88c154",
+        "name": "Publish switch1 status",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch1",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d2ee05e8891c6e57",
+        "x": 1260,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3a2e3c8061375e3b",
+        "type": "mqtt out",
+        "z": "601aaba.a88c154",
+        "name": "Publish switch2 status",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch2",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d2ee05e8891c6e57",
+        "x": 1260,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "16adf0f4585a8903",
+        "type": "mqtt out",
+        "z": "601aaba.a88c154",
+        "name": "Publish switch3 status",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/switch3",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d2ee05e8891c6e57",
+        "x": 1260,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "235f053b5a76a204",
+        "type": "ui_gauge",
+        "z": "a6ec67d9f7944625",
+        "name": "CPU temp guage",
+        "group": "78031af66a4e081f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "Celsius",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1090,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f9c23d23.c8c24",
+        "type": "exec",
+        "z": "a6ec67d9f7944625",
+        "command": "ssh pi@192.168.0.100 vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "hostTempCmd",
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "a0ad4644.0efbf8",
+                "340a3ba30736bc26"
+            ],
+            [
+                "7765218fa8a8422b"
+            ],
+            [
+                "fa93c0b1106a882b"
+            ]
+        ]
+    },
+    {
+        "id": "a0ad4644.0efbf8",
+        "type": "function",
+        "z": "a6ec67d9f7944625",
+        "name": "Extract CPU temp",
+        "func": "const re = /^temp=(.*)'C$/gm;\nmsg.payload = Number(msg.payload.replace(re, '$1'));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 220,
+        "wires": [
+            [
+                "235f053b5a76a204"
+            ]
+        ]
+    },
+    {
+        "id": "a97d78fc.40c268",
+        "type": "inject",
+        "z": "a6ec67d9f7944625",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "7200",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "f9c23d23.c8c24"
+            ]
+        ]
+    },
+    {
+        "id": "fa93c0b1106a882b",
+        "type": "debug",
+        "z": "a6ec67d9f7944625",
+        "name": "return code",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7765218fa8a8422b",
+        "type": "debug",
+        "z": "a6ec67d9f7944625",
+        "name": "stderr",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "340a3ba30736bc26",
+        "type": "mqtt out",
+        "z": "a6ec67d9f7944625",
+        "name": "Publish temp data",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/sensor/temperature/data",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d2ee05e8891c6e57",
+        "x": 830,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8d654a66c15fcee2",
+        "type": "mqtt in",
+        "z": "a6ec67d9f7944625",
+        "name": "Subscribe to temp data",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/sensor/temperature/data",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d2ee05e8891c6e57",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "6f5c521f3adf2576"
+            ]
+        ]
+    },
+    {
+        "id": "6f5c521f3adf2576",
+        "type": "debug",
+        "z": "a6ec67d9f7944625",
+        "name": "temperature",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "7d6cac6e2c88827a",
+        "type": "mqtt in",
+        "z": "a6ec67d9f7944625",
+        "name": "Subscribe to check temp data",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/sensor/temperature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d2ee05e8891c6e57",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 220,
+        "wires": [
+            [
+                "f9c23d23.c8c24"
+            ]
+        ]
+    },
+    {
+        "id": "088b5ffa27fd61a0",
+        "type": "mqtt out",
+        "z": "a6ec67d9f7944625",
+        "name": "Check temp data",
+        "topic": "projekt-ulesanne__hazi-feladat_2022-spring-its8050/sensor/temperature",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d2ee05e8891c6e57",
+        "x": 570,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4f77434116e33fa7",
+        "type": "inject",
+        "z": "a6ec67d9f7944625",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 480,
+        "wires": [
+            [
+                "088b5ffa27fd61a0"
+            ]
+        ]
+    }
+]
