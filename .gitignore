@@ -3,6 +3,6 @@ bin
 .metadata
 *.ldb
 .history
-DS_Store
+.DS_Store
 slprj
 node_modules
