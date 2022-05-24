@@ -1,0 +1,38 @@
+{
+  "name": "traffic-lights",
+  "version": "1.0.0",
+  "description": "Traffic lights controller for a dual-carriageway system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha \"./tests/**_test.js\" --timeout 30000",
+    "start": "node index.js"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "conf": "^10.1.2",
+    "mocha": "^10.0.0"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0"
+  },
+  "nyc" : {
+    "include": [
+      "*.js",
+      "src/*.js"
+    ],
+    "exclude": [
+      "**/node_modules/**",
+      "**/test/**",
+      "**/coverage/**"
+    ],
+    "all": true
+  }
+}

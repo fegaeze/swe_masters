@@ -1,1 +1,8 @@
-.DS_Store
+bin
+*.class
+.metadata
+*.ldb
+.history
+DS_Store
+slprj
+node_modules
