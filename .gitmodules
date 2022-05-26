@@ -4,3 +4,6 @@
 [submodule "rapid_prototyping_and_robotics/robotics_club_boatrace_v2"]
 	path = rapid_prototyping_and_robotics/robotics_club_boatrace_v2
 	url = https://github.com/fegaeze/robotics_club_boatrace_v2.git
+[submodule "advanced_programming"]
+	path = advanced_programming
+	url = https://github.com/fegaeze/advanced_programming.git
