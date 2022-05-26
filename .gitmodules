@@ -7,3 +7,6 @@
 [submodule "advanced_programming"]
 	path = advanced_programming
 	url = https://github.com/fegaeze/advanced_programming.git
+[submodule "agile_software_development"]
+	path = agile_software_development
+	url = https://github.com/fegaeze/agile_software_development.git
