@@ -10,3 +10,6 @@
 [submodule "agile_software_development"]
 	path = agile_software_development
 	url = https://github.com/fegaeze/agile_software_development.git
+[submodule "master_seminar_one"]
+	path = master_seminar_one
+	url = https://github.com/fegaeze/master_seminar_one.git
