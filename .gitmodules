@@ -1,0 +1,6 @@
+[submodule "rapid_prototyping_and_robotics/robotics_club_boatrace"]
+	path = rapid_prototyping_and_robotics/robotics_club_boatrace
+	url = https://github.com/fegaeze/robotics_club_boatrace.git
+[submodule "rapid_prototyping_and_robotics/robotics_club_boatrace_v2"]
+	path = rapid_prototyping_and_robotics/robotics_club_boatrace_v2
+	url = https://github.com/fegaeze/robotics_club_boatrace_v2.git
